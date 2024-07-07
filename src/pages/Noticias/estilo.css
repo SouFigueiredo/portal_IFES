@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nanum+Gothic&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    transition: filter 0.5s; /* Transição para suavizar o efeito de desfoque */
+    filter: none;
+}
+
+/* Divs principais */
+.header {
+    width: 100%;
+    height: 18%;
+    background-color: #1C232E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+
+.main {
+    background-color: #1C232E;
+    width: 100%;
+    height: 82%;
+    display: flex;
+}
+
+/* Lista de abas no topo */
+.abas {
+    width: 50%;
+}
+
+ul img {
+    width: 14px;
+    transform: rotate(90deg);
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 530;
+    font-style: normal;
+    color: #B0B0B0;
+}
+
+li:hover {
+    color: white;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.649);
+}
+
+/* Botão entrar na conta */
+.setaConta {
+    width: 15px;
+    margin-left: 4px;
+}
+
+.bottonConta {
+    color: white;
+    border: white solid 3px;
+    border-radius: 40px;
+    padding: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.bottonConta:hover {
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.649);
+}
+
+/* Logo */
+.logo img {
+    width: 45px;
+}
+
+/* Notícias */
+.aba1 {
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.aba2 {
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.noticia2,
+.noticia3 {
+    border-radius: 20px;
+    width: 320px;
+    height: 240px;
+    margin-left: 10px;
+    margin-top: 60px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.noticia2 {
+    background-color: #0062ff;
+}
+
+.noticia3 {
+    background-color: #00ff8c;
+    margin-left: 40px;
+}
+
+.noticia1 {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #0062ff;
+    width: 320px;
+    height: 500px;
+    margin-left: 85px;
+    overflow: hidden;
+    transition: width 0.5s, height 0.5s;
+}
+
+.noticia1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.noticia1::before,
+.noticia1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.noticia1::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.noticia1::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.textoCima {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    right: 65px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 2;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.textoPrincipal {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    bottom: 50px;
+    left: 6px;
+    width: 100%;
+    text-align: start;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.textoBaixo {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 15px;
+    left: 13px;
+    width: 100%;
+    text-align: start;
+    color: white;
+    font-size: 13px;
+    z-index: 2;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.noticia1:hover img{
+    transform: scale(1.2 );
+}
+
+.noticia2:hover,
+.noticia3:hover {
+    width: 330px;
+    height: 510px;
+}
