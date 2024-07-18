@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem vindo ao Iformado!</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="conteudoHome">
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
+
+      <div class="abas">
+        <ul>
+          <li><a href="#" class="abaHome">HOME</a></li>
+          <img src="images/minus.png" alt="" />
+          <li><a href="abaNoticias.html">NOTÍCIAS</a></li>
+          <img src="images/minus.png" alt="" />
+          <li><a>TERCEIRÃO</a></li>
+        </ul>
+      </div>
+
+      <div class="conta"><a href="#">Entrar</a>
+        <button class="bottonConta" id="btCriar">Criar Conta<img class="setaConta"
+            src="images/seta-para-a-direita.png" /></button>
+      </div>
+    </div>
+
+    <div class="mainHome">
+
+
+      <div class="esquerdaMain">
+        <div class="itensEsquerdaMain">
+          <p class="fraseHome1">Fique <b class="bolder">por dentro</b><br>do que o <b
+              class="bolder">terceirão</b><br>vai
+            fazer!</p>
+          <p class="fraseHome2">O campus cada vez mais perto de você</p>
+          <div class="buttonLinkLogin"><a class="linkLogin" href="#">VENHA FAZER PARTE<img
+                src="images/angulo-direito.png"></a></div>
+        </div>
+      </div>
+      <div class="direitaMain"></div>
+      <div class="divDecoração1"></div>
+      <div class="divDecoração2"></div>
+    </div>
+
+  </div>
+
+  <div id="abaLogin" class="login">
+    <div class="divAbaLogin">
+      <div class="tituloLogin">
+        <img src="images/logo2.png">
+        <p>Junte-se a nós</p>
+      </div>
+      <div class="dados">
+        <p class="credenciais">Nome:</p>
+        <input placeholder="Entre com seu nome" class="inDados" type="text">
+        <p class="credenciais">Matrícula:</p>
+        <input placeholder="Entre com sua matrícula" class="inDados">
+        <p class="credenciais">Senha:</p>
+        <input placeholder="Entre com sua senha" class="inDados" type="password">
+      </div>
+      <div class="buttons">
+        <input type="button" value="Criar Conta">
+        <input type="button" value="Voltar" id="btVoltarLogin">
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="homeScript.js"></script>
+</body>
+
+</html>
