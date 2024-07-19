@@ -20,7 +20,7 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    transition: filter 0.2s;
+    transition: filter 1s ease;
 }
 
 .abaHome {
@@ -424,7 +424,7 @@ li:hover {
 
 /*Para aplicar o efeito de blur ao clicar no botão*/
 .desfocado{
-    filter: blur(5px);
+    filter: blur(7px);
     display: flex;
     flex-direction: column;
     width: 100vw;

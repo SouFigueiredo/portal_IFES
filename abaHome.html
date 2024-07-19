@@ -28,8 +28,8 @@
         </ul>
       </div>
 
-      <div class="conta"><a href="#">Entrar</a>
-        <button class="bottonConta" id="btCriar">Criar Conta<img class="setaConta"
+      <div class="conta" id="btCriar"><a href="#">Entrar</a>
+        <button class="bottonConta" >Criar Conta<img class="setaConta"
             src="images/seta-para-a-direita.png" /></button>
       </div>
     </div>
@@ -43,7 +43,7 @@
               class="bolder">terceirão</b><br>vai
             fazer!</p>
           <p class="fraseHome2">O campus cada vez mais perto de você</p>
-          <div class="buttonLinkLogin"><a class="linkLogin" href="#">VENHA FAZER PARTE<img
+          <div id="linkConta" class="buttonLinkLogin"><a class="linkLogin" href="#">VENHA FAZER PARTE<img
                 src="images/angulo-direito.png"></a></div>
         </div>
       </div>
@@ -62,14 +62,14 @@
       </div>
       <div class="dados">
         <p class="credenciais">Nome:</p>
-        <input placeholder="Entre com seu nome" class="inDados" type="text">
+        <input id="inName" placeholder="Entre com seu nome" class="inDados" type="text">
         <p class="credenciais">Matrícula:</p>
-        <input placeholder="Entre com sua matrícula" class="inDados">
+        <input id="inMatricula" placeholder="Entre com sua matrícula" class="inDados">
         <p class="credenciais">Senha:</p>
-        <input placeholder="Entre com sua senha" class="inDados" type="password">
+        <input id="inSenha" placeholder="Entre com sua senha" class="inDados" type="password">
       </div>
       <div class="buttons">
-        <input type="button" value="Criar Conta">
+        <input id="btCriarConta" type="button" value="Criar Conta">
         <input type="button" value="Voltar" id="btVoltarLogin">
       </div>
 
@@ -77,7 +77,7 @@
 
   </div>
 
-  <script src="homeScript.js"></script>
+  <script type="module" src="homeScript.js"></script>
 </body>
 
 </html>

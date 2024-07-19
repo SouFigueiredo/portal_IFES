@@ -1,4 +1,3 @@
-
 const iconBusca = document.getElementById("clickBusca");
 const inBusca = document.getElementById("inBusca");
 const divBusca = document.querySelector(".barraPesquisa");
