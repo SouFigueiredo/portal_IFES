@@ -28,8 +28,8 @@
         </ul>
       </div>
 
-      <div class="conta" id="btCriar"><a href="#">Entrar</a>
-        <button class="bottonConta" >Criar Conta<img class="setaConta"
+      <div class="conta" id="btEntrar">
+        <button class="btEntrarConta">Entrar como Administrador<img class="setaConta"
             src="images/seta-para-a-direita.png" /></button>
       </div>
     </div>
@@ -43,8 +43,6 @@
               class="bolder">terceirão</b><br>vai
             fazer!</p>
           <p class="fraseHome2">O campus cada vez mais perto de você</p>
-          <div id="linkConta" class="buttonLinkLogin"><a class="linkLogin" href="#">VENHA FAZER PARTE<img
-                src="images/angulo-direito.png"></a></div>
         </div>
       </div>
       <div class="direitaMain"></div>
@@ -55,22 +53,38 @@
   </div>
 
   <div id="abaLogin" class="login">
+    <div id="btVoltar" class="fechaLogin">
+      <img class="btFechaLogin" src="images/x.png" alt="">
+    </div>
     <div class="divAbaLogin">
       <div class="tituloLogin">
         <img src="images/logo2.png">
         <p>Junte-se a nós</p>
       </div>
-      <div class="dados">
-        <p class="credenciais">Nome:</p>
-        <input id="inName" placeholder="Entre com seu nome" class="inDados" type="text">
-        <p class="credenciais">Matrícula:</p>
-        <input id="inMatricula" placeholder="Entre com sua matrícula" class="inDados">
-        <p class="credenciais">Senha:</p>
-        <input id="inSenha" placeholder="Entre com sua senha" class="inDados" type="password">
+
+      <div id="mudaAba" class="abasLogin">
+        <p class="tituloAba">Solicitar<br>Código</p>
+        <p class="tituloAba">Entrar<br>como Adm</p>
+        <div class="abaMovel"></div>
       </div>
+
+      <div class="inputAtivoLogin">
+        <div class="dados">
+          <p class="credenciais">Email:</p>
+          <input id="inEmail" placeholder="Solicite o código de administrador" class="inDados">
+        </div>
+      </div>
+      <div class="inputOcultoLogin">
+        <div class="dados">
+          <p class="credenciais">Código:</p>
+          <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
+        </div>
+
+      </div>
+
       <div class="buttons">
-        <input id="btCriarConta" type="button" value="Criar Conta">
-        <input type="button" value="Voltar" id="btVoltarLogin">
+        <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
+        <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
       </div>
 
     </div>

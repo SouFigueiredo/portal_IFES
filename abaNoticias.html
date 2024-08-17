@@ -27,8 +27,8 @@
           <li><a>TERCEIRÃO</a></li>
         </ul>
       </div>
-      <div class="conta"><a href="#">Entrar</a>
-        <button class="bottonConta" id="btCriar">Criar Conta<img class="setaConta"
+      <div class="conta" id="btEntrar">
+        <button class="btEntrarConta">Entrar como Administrador<img class="setaConta"
             src="images/seta-para-a-direita.png" /></button>
       </div>
     </div>
@@ -65,8 +65,47 @@
 
   </div>
 
+  
+  <div id="abaLogin" class="login">
+    <div id="btVoltar" class="fechaLogin">
+      <img class="btFechaLogin" src="images/x.png" alt="">
+    </div>
+    <div class="divAbaLogin">
+      <div class="tituloLogin">
+        <img src="images/logo2.png">
+        <p>Junte-se a nós</p>
+      </div>
+
+      <div id="mudaAba" class="abasLogin">
+        <p class="tituloAba">Solicitar<br>Código</p>
+        <p class="tituloAba">Entrar<br>como Adm</p>
+        <div class="abaMovel"></div>
+      </div>
+
+      <div class="inputAtivoLogin">
+        <div class="dados">
+          <p class="credenciais">Email:</p>
+          <input id="inEmail" placeholder="Solicite o código de administrador" class="inDados">
+        </div>
+      </div>
+      <div class="inputOcultoLogin">
+        <div class="dados">
+          <p class="credenciais">Código:</p>
+          <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
+        </div>
+
+      </div>
+
+      <div class="buttons">
+        <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
+        <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
+      </div>
+
+    </div>
+
   </div>
-  <script src="noticiaScript.js"></script>
+
+  <script type="module" src="noticiaScript.js"></script>
 </body>
 
 </html>

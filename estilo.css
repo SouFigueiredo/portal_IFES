@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #1C232E;
     overflow: hidden;
 }
@@ -97,22 +97,23 @@ li:hover {
     margin-left: 4px;
 }
 
-.bottonConta {
+.btEntrarConta {
     background-color: #00000000;
     border: white solid 3px;
     border-radius: 40px;
     padding: 5px;
     margin-left: 20px;
-    width: 120px;
+    width: 218px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Inter", sans-serif;
     font-weight: 600;
     color: white;
+    transition: 0.2s;
 }
 
-.bottonConta:hover {
+.btEntrarConta:hover {
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.649);
 }
 
@@ -123,10 +124,19 @@ li:hover {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     z-index: 1;
+    transition: 0.5s;
 }
 
-.conta :hover{
+.conta :hover {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.649);
+}
+
+.iconUser {
+    width: 30px;
+}
+
+.nameUser {
+    margin: 10px;
 }
 
 /* Logo */
@@ -135,13 +145,13 @@ li:hover {
 }
 
 /*aba de notícias*/
-.noticiasDestaque{
+.noticiasDestaque {
     height: 90%;
     width: 80%;
     display: flex;
 }
 
-.abaPesquisa{
+.abaPesquisa {
     width: 100%;
     height: 60px;
     display: flex;
@@ -150,7 +160,7 @@ li:hover {
     background-color: #0f1218;
 }
 
-.barraPesquisa{
+.barraPesquisa {
     background-color: #1C232E;
     display: flex;
     align-items: center;
@@ -159,7 +169,7 @@ li:hover {
     margin-right: 130px;
 }
 
-.barraPesquisa input{
+.barraPesquisa input {
     background-color: #1C232E;
     border-radius: 4px;
     border: none;
@@ -168,31 +178,31 @@ li:hover {
     transition: width 0.5s;
 }
 
-.barraPesquisa img{
+.barraPesquisa img {
     width: 17px;
     margin: 10px;
 }
 
-.barraPesquisa.focada{
+.barraPesquisa.focada {
     background-color: white;
 }
 
 .barraPesquisa input::placeholder {
     position: relative;
     top: 1px;
-    color:#ffffff;
+    color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: bolder;
 }
 
-.barraPesquisa input:focus{
+.barraPesquisa input:focus {
     outline: none;
     border: none;
     background-color: white;
     width: 200px;
 }
 
-.barraPesquisa input:focus::placeholder{
+.barraPesquisa input:focus::placeholder {
     font-family: "Roboto", sans-serif;
     font-weight: 800;
     color: #1C232E;
@@ -217,12 +227,11 @@ li:hover {
 .noticia1, .noticia2 {
     position: relative;
     display: inline-block;
-    border-radius: 15px;
-    background-color: #0062ff;
+    border-radius: 25px;
+    background-color: #1C232E;
     width: 400px;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
-    transition: width 0.5s, height 0.5s;
     margin: 60px;
 }
 
@@ -231,7 +240,6 @@ li:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
     transition: transform 0.3s;
 }
 
@@ -255,7 +263,7 @@ li:hover {
 }
 
 .noticia1::after,
-.noticia2::after{
+.noticia2::after {
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     border-bottom-left-radius: 15px;
@@ -314,7 +322,7 @@ li:hover {
 }
 
 .noticia1:hover img, .noticia2:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /*Aba de Home*/
@@ -340,7 +348,7 @@ li:hover {
 }
 
 .itensEsquerdaMain {
-    height: 57%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -351,7 +359,7 @@ li:hover {
     height: 100%;
 }
 
-.divDecoração1{
+.divDecoração1 {
     position: fixed;
     right: -30px;
     bottom: 0;
@@ -361,7 +369,7 @@ li:hover {
     transform: rotate(10deg);
 }
 
-.divDecoração2{
+.divDecoração2 {
     position: fixed;
     right: -200px;
     bottom: 384px;
@@ -423,7 +431,8 @@ li:hover {
 }
 
 /*Para aplicar o efeito de blur ao clicar no botão*/
-.desfocado{
+.desfocado {
+    pointer-events: none;
     filter: blur(7px);
     display: flex;
     flex-direction: column;
@@ -436,7 +445,7 @@ li:hover {
 
 
 /*Aba de login*/
-.login{
+.login {
     font-family: "Inter", sans-serif;
     display: none;
     position: fixed;
@@ -451,7 +460,7 @@ li:hover {
     z-index: 10;
 }
 
-.abaLoginVisivel{
+.abaLoginVisivel {
     display: block;
 }
 
@@ -461,7 +470,7 @@ li:hover {
     font-size: 10px;
 }
 
-.divAbaLogin{
+.divAbaLogin {
     width: 100%;
     height: 100%;
     display: flex;
@@ -470,21 +479,29 @@ li:hover {
     justify-content: space-around;
 }
 
-.dados{
-    width: 70%;
-    height: 50%;
+.dados {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
 }
 
-.credenciais{
+.inputAtivoLogin {
+    display: block;
+    width: 70%;
+}
+
+.inputOcultoLogin {
+    display: none;
+    width: 70%;
+}
+
+.credenciais {
     font-weight: 600;
     font-size: 14px;
-    margin-top: 13px;
+    margin-bottom: 10px;
 }
 
-.inDados{
+.inDados {
     width: 100%;
     border-top: none;
     border-left: none;
@@ -501,16 +518,16 @@ li:hover {
     outline: none;
 }
 
-.tituloLogin p{
+.tituloLogin p {
     font-size: 30px;
     margin-top: 10px;
 }
 
-.tituloLogin img{
+.tituloLogin img {
     width: 40px;
 }
 
-.tituloLogin{
+.tituloLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -520,7 +537,7 @@ li:hover {
     padding: 10px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     height: 20%;
     width: 70%;
@@ -528,19 +545,91 @@ li:hover {
     align-items: center;
 }
 
-.buttons input{
+.buttons input {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     color: white;
     width: 100px;
     height: 35px;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #1C232E;
     border: none;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.buttons input:hover{
+.buttons input:hover {
     text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.649);
+}
+
+.btAtivoLogin{
+    display: block;
+}
+
+.btOcultoLogin{
+    display: none;
+}
+
+.abasLogin {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    background-color: #1c232e60;
+    height: 55px;
+    border-radius: 30px;
+}
+
+.abasLogin :hover {
+    cursor: pointer;
+}
+
+.abasLogin p {
+    user-select: none;
+    color: #ffffff;
+    text-align: center;
+    z-index: 2;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    mix-blend-mode: difference;
+}
+
+.abaMovel {
+    position: absolute;
+    background-color: #1C232E;
+    border-radius: 30px;
+    width: 150px;
+    height: 100%;
+    left: 0;
+    transition: left 0.5s;
+    z-index: 1;
+    /* Mantém a div abaixo do texto */
+}
+
+.abaMovelEntrar {
+    left: 144px;
+    width: 178px;
+}
+
+.fechaLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: 0.3s;
+}
+
+.fechaLogin img{
+    width: 14px;
+    cursor: pointer;
+}
+
+.fechaLogin:hover {
+    background-color: #1c232e48;
 }
