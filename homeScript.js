@@ -42,9 +42,9 @@ let btEntrar = document.querySelector('.btOcultoLogin');
 let btSolicitar = document.querySelector('.btAtivoLogin');
 
 document.getElementById('mudaAba').addEventListener('click', function () {
-    if(aba.classList.contains('abaMovelEntrar')){
+    if (aba.classList.contains('abaMovelEntrar')) {
         aba.classList.remove('abaMovelEntrar');
-        
+
         inputEmail.classList.remove('inputOcultoLogin');
         inputEmail.classList.add('inputAtivoLogin');
 
@@ -56,9 +56,9 @@ document.getElementById('mudaAba').addEventListener('click', function () {
 
         btSolicitar.classList.remove('btOcultoLogin');
         btSolicitar.classList.add('btAtivoLogin');
-    }else{
+    } else {
         aba.classList.add('abaMovelEntrar');
-        
+
         inputEmail.classList.add('inputOcultoLogin');
         inputEmail.classList.remove('inputAtivoLogin');
 

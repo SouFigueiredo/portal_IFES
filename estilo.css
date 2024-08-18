@@ -93,7 +93,7 @@ li:hover {
 
 /* Botão entrar na conta */
 .setaConta {
-    width: 15px;
+    width: 12px;
     margin-left: 4px;
 }
 
@@ -357,6 +357,66 @@ li:hover {
 .direitaMain {
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.carrossel {
+    position: relative; /* Define a posição do carrossel para que os controles possam ser posicionados relativamente a ele */
+    width: 600px; /* Largura total do carrossel */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
+    border-radius: 20px; /* Arredonda os cantos do carrossel */
+    height: 350px;
+}
+
+.carousel-itens {
+    display: flex; /* Exibe os slides lado a lado em uma linha */
+    width: 300%; /* Define a largura total como três vezes a largura do carrossel para acomodar os três slides */
+}
+
+.carrosselNoticias {
+    min-width: 100%; /* Cada item ocupa 100% da largura do contêiner do carrossel */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total do item */
+}
+
+.carrosselNoticias img {
+    width: 650px;
+}
+
+.btCarrossel{
+    position: absolute; 
+    top: 50%; /* Centraliza verticalmente os botões */
+    transform: translateY(-50%); /* Ajusta a posição para garantir que estejam exatamente no meio */
+    border: none; /* Remove bordas padrão dos botões */
+    border-radius: 300px;
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.4s;
+    background-color: #1c232e1a;
+}
+
+.btCarrossel:hover{
+    background-color: #1c232e74;
+    opacity: 1;
+}
+
+.btCarrossel img{
+    width: 15px;
+}
+
+.next{
+    right: 10px;
+}
+
+.prev{
+    left: 10px;
 }
 
 .divDecoração1 {
