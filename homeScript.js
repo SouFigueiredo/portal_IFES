@@ -92,3 +92,42 @@ document.getElementById('btSolicitar').addEventListener('click', function () {
         document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
     }
 })
+// Seleciona os elementos necessários
+const carrosselFotos = document.querySelector('.carrosselFotos');
+const marcadores = document.querySelectorAll('.marcador');
+const slides = document.querySelectorAll('.carrosselNoticias');
+const totalFotos = marcadores.length;
+const intervalo = 5000; // Tempo em milissegundos para a transição automática
+
+let slideIndex = 0;
+
+// Função para mostrar um slide específico
+function mostrarSlide(index) {
+    // Move os slides
+    carrosselFotos.style.transform = `translateX(${-index * 100}%)`;
+    // Remove a classe active de todos os slides e marcadores
+    slides.forEach(slide => slide.classList.remove('active'));
+    marcadores.forEach(marcador => marcador.classList.remove('active'));
+    // Adiciona a classe active ao slide e marcador atuais
+    slides[index].classList.add('active');
+    marcadores[index].classList.add('active');
+}
+
+// Função para alterar o slide ao clicar nos marcadores
+marcadores.forEach((marcador, index) => {
+    marcador.addEventListener('click', () => {
+        slideIndex = index;
+        mostrarSlide(slideIndex);
+    });
+});
+
+// Inicia o carrossel e define o intervalo automático
+function iniciarCarrossel() {
+    mostrarSlide(slideIndex);
+    setInterval(() => {
+        slideIndex = (slideIndex + 1) % totalFotos;
+        mostrarSlide(slideIndex);
+    }, intervalo);
+}
+
+iniciarCarrossel();

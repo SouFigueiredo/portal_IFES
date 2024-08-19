@@ -364,60 +364,95 @@ li:hover {
 }
 
 .carrossel {
-    position: relative; /* Define a posição do carrossel para que os controles possam ser posicionados relativamente a ele */
-    width: 600px; /* Largura total do carrossel */
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
-    border-radius: 20px; /* Arredonda os cantos do carrossel */
-    height: 350px;
+    position: relative;
+    width: 525px;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 300px;
 }
 
-.carousel-itens {
-    display: flex; /* Exibe os slides lado a lado em uma linha */
-    width: 300%; /* Define a largura total como três vezes a largura do carrossel para acomodar os três slides */
+.carrosselFotos {
+    display: flex;
 }
 
 .carrosselNoticias {
-    min-width: 100%; /* Cada item ocupa 100% da largura do contêiner do carrossel */
-    box-sizing: border-box; /* Inclui padding e bordas na largura total do item */
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrosselNoticias:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.999), transparent);
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
 }
 
 .carrosselNoticias img {
-    width: 650px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.btCarrossel{
-    position: absolute; 
-    top: 50%; /* Centraliza verticalmente os botões */
-    transform: translateY(-50%); /* Ajusta a posição para garantir que estejam exatamente no meio */
-    border: none; /* Remove bordas padrão dos botões */
-    border-radius: 300px;
-    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.7;
-    transition: 0.4s;
-    background-color: #1c232e1a;
+.tituloNoticiaHome {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    bottom: 25px;
+    left: 28px;
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.btCarrossel:hover{
-    background-color: #1c232e74;
+/* Mostra o título apenas quando o slide está ativo */
+.carrosselNoticias.active .tituloNoticiaHome {
     opacity: 1;
 }
 
-.btCarrossel img{
+.barra-navegacao {
+    position: absolute;
+    bottom: 23px;
+    right: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    height: 15px;
+}
+
+.marcador {
     width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: #ffffff3c;
+    position: relative;
+    border-radius: 100px;
 }
 
-.next{
-    right: 10px;
+.marcador:hover {
+    background-color: rgba(28, 52, 89, 0.226);
 }
 
-.prev{
-    left: 10px;
+.marcador:not(:last-child) {
+    margin-right: 5px;
 }
+
+.marcador.active {
+    background-color: #1C232E;
+}
+
+
 
 .divDecoração1 {
     position: fixed;
