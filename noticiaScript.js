@@ -45,7 +45,7 @@ document.getElementById('btEntrar').addEventListener('click', function () {
         inputCodigo.classList.add('inputOcultoLogin');
     }
 
-    document.querySelector('.conteudoHome').classList.add('desfocado');
+    document.querySelector('.bodyNoticias').classList.add('desfocadoNoticias');
     setTimeout(function () {
         document.getElementById('abaLogin').classList.add('abaLoginVisivel');
     }, 400);
@@ -94,7 +94,7 @@ document.getElementById('mudaAba').addEventListener('click', function () {
 //botao para sair da tela de login
 const btVoltar = document.getElementById("btVoltar");
 btVoltar.addEventListener('click', function () {
-    document.querySelector('.conteudoHome').classList.remove('desfocado');
+    document.querySelector('.bodyNoticias').classList.remove('desfocadoNoticias');
     document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
 })
 
@@ -106,7 +106,7 @@ document.getElementById('btSolicitar').addEventListener('click', function () {
     vetContas.push(conta)
 
     if (vetContas.length > 0) {
-        document.querySelector('.conteudoHome').classList.remove('desfocado');
+        document.querySelector('.bodyNoticias').classList.remove('desfocadoNoticias');
         document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
     }
 })

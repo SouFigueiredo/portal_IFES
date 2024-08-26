@@ -12,60 +12,111 @@
 </head>
 
 <body>
-  <div class="conteudoHome">
-    <div class="header">
-      <div class="logo">
-        <img src="images/logo.png" alt="" />
+  <div class="bodyNoticias">
+    <div class="apresentacaoNoticias">
+      <div class="headerNoticias">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+
+        <div class="abas">
+          <ul>
+            <li><a href="abaHome.html">HOME</a></li>
+            <img src="images/minus.png" alt="" />
+            <li><a href="abaNoticias.html" class="abaNoticias">NOTÍCIAS</a></li>
+            <img src="images/minus.png" alt="" />
+            <li><a href="abaTerceirao.html">TERCEIRÃO</a></li>
+          </ul>
+        </div>
+        <div class="conta" id="btEntrar">
+          <button class="btEntrarConta">Entrar como Administrador<img class="setaConta"
+              src="images/seta-para-a-direita.png" /></button>
+        </div>
       </div>
 
-      <div class="abas">
-        <ul>
-          <li><a href="abaHome.html">HOME</a></li>
-          <img src="images/minus.png" alt="" />
-          <li><a href="#" class="abaNoticias">NOTÍCIAS</a></li>
-          <img src="images/minus.png" alt="" />
-          <li><a>TERCEIRÃO</a></li>
-        </ul>
-      </div>
-      <div class="conta" id="btEntrar">
-        <button class="btEntrarConta">Entrar como Administrador<img class="setaConta"
-            src="images/seta-para-a-direita.png" /></button>
+      <div class="mainNoticias">
+        <div class="abaPesquisa">
+          <div class="barraPesquisa">
+            <img id="clickBusca" src="images/seachWhite.png" alt="">
+            <input id="inBusca" type="text" placeholder="BUSCAR">
+          </div>
+        </div>
+
+        <div class="noticiasDestaque">
+          <div class="aba1">
+            <div class="noticia1">
+              <img src="images/alojamentoFeminino.jpeg" alt="">
+              <p class="textoCima">Presídio disfarçado</p>
+              <p class="textoPrincipal">Imagens revelam local onde alunas são mantidas</p>
+              <p class="textoBaixo">Instituição aborda o ocorrido com descaso</p>
+            </div>
+          </div>
+
+          <div class="aba2">
+            <div class="noticia2">
+              <img src="images/alojamentoFemininoPraça.jpeg" alt="">
+              <p class="textoCima">Imagens pertubadoras</p>
+              <p class="textoPrincipal">Escritório do alojamento feminino é invadido</p>
+              <p class="textoBaixo">Alunos buscam por bolas de futsal</p>
+            </div>
+
+            <div class="noticia3">
+              <img src="images/alojamentoMasculino.jpeg" alt="">
+              <p class="textoCima">Inferno na terra</p>
+              <p class="textoPrincipal">A verdade por trás do alojamento masculino</p>
+              <p class="textoBaixo">Sobreviventes relatam com medo</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+    <div class="listNoticias">
+      <div class="listNoticia">
+        <div class="ftListNoticia">
+          <img src="images/alojamentoFeminino.jpeg" alt="">
+        </div>
 
-    <div class="main">
-      <div class="abaPesquisa">
-        <div class="barraPesquisa">
-          <img id="clickBusca" src="images/seachWhite.png" alt="">
-          <input id="inBusca" type="text" placeholder="BUSCAR">
+        <div class="detalhesListNoticia">
+          <p class="dataListNoticia">25/08/2024</p>
+          <p class="tituloListNoticia">Alojamento feminino é desmascarado</p>
+          <p class="descricaoListNoticia">Local é descorberto como cativeiro de alunas com auxílio moradia garantido
+            pela instituição. Estas eram mantidas sob condições deploráveis e desumanas</p>
         </div>
       </div>
 
-      <div class="noticiasDestaque">
-        <div class="aba1">
-          <div class="noticia1">
-            <img src="images/alojamentoFeminino.jpeg" alt="">
-            <p class="textoCima">Presídio disfarçado</p>
-            <p class="textoPrincipal">Imagens revelam local onde alunas são mantidas</p>
-            <p class="textoBaixo">Instituição aborda o ocorrido com descaso</p>
-          </div>
+      <div class="listNoticia">
+        <div class="ftListNoticia">
+          <img src="images/alojamentoFemininoPraça.jpeg" alt="">
         </div>
 
-        <div class="aba2">
-          <div class="noticia2">
-            <img src="images/alojamentoFeminino.jpeg" alt="">
-            <p class="textoCima">Presídio disfarçado</p>
-            <p class="textoPrincipal">Imagens revelam local onde alunas são mantidas</p>
-            <p class="textoBaixo">Instituição aborda o ocorrido com descaso</p>
-          </div>
+        <div class="detalhesListNoticia">
+          <p class="dataListNoticia">25/08/2024</p>
+          <p class="tituloListNoticia">Alojamento feminino é desmascarado</p>
+          <p class="descricaoListNoticia">Local é descorberto como cativeiro de alunas com auxílio moradia garantido
+            pela instituição. Estas eram mantidas sob condições deploráveis e desumanas</p>
         </div>
+      </div>
+
+      <div class="listNoticia">
+        <div class="ftListNoticia">
+          <img src="images/alojamentoMasculino.jpeg" alt="">
+        </div>
+
+        <div class="detalhesListNoticia">
+          <p class="dataListNoticia">25/08/2024</p>
+          <p class="tituloListNoticia">Alojamento feminino é desmascarado</p>
+          <p class="descricaoListNoticia">Local é descorberto como cativeiro de alunas com auxílio moradia garantido
+            pela instituição. Estas eram mantidas sob condições deploráveis e desumanas</p>
+        </div>
+
       </div>
 
     </div>
 
   </div>
 
-  
+
   <div id="abaLogin" class="login">
     <div id="btVoltar" class="fechaLogin">
       <img class="btFechaLogin" src="images/x.png" alt="">

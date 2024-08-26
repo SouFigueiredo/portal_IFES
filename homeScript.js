@@ -27,7 +27,7 @@ document.getElementById('btEntrar').addEventListener('click', function () {
         inputCodigo.classList.add('inputOcultoLogin');
     }
 
-    document.querySelector('.conteudoHome').classList.add('desfocado');
+    document.querySelector('.bodyHome').classList.add('desfocado');
     setTimeout(function () {
         document.getElementById('abaLogin').classList.add('abaLoginVisivel');
     }, 400);
@@ -76,7 +76,7 @@ document.getElementById('mudaAba').addEventListener('click', function () {
 //botao para sair da tela de login
 const btVoltar = document.getElementById("btVoltar");
 btVoltar.addEventListener('click', function () {
-    document.querySelector('.conteudoHome').classList.remove('desfocado');
+    document.querySelector('.bodyHome').classList.remove('desfocado');
     document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
 })
 
@@ -88,7 +88,7 @@ document.getElementById('btSolicitar').addEventListener('click', function () {
     vetContas.push(conta)
 
     if (vetContas.length > 0) {
-        document.querySelector('.conteudoHome').classList.remove('desfocado');
+        document.querySelector('.bodyHome').classList.remove('desfocado');
         document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
     }
 })
@@ -97,7 +97,7 @@ const carrosselFotos = document.querySelector('.carrosselFotos');
 const marcadores = document.querySelectorAll('.marcador');
 const slides = document.querySelectorAll('.carrosselNoticias');
 const totalFotos = marcadores.length;
-const intervalo = 5000; // Tempo em milissegundos para a transição automática
+const intervalo = 2000; // Tempo em milissegundos para a transição automática
 
 let slideIndex = 0;
 
@@ -105,7 +105,7 @@ let slideIndex = 0;
 function mostrarSlide(index) {
     // Move os slides
     carrosselFotos.style.transform = `translateX(${-index * 100}%)`;
-    // Remove a classe active de todos os slides e marcadores
+    
     slides.forEach(slide => slide.classList.remove('active'));
     marcadores.forEach(marcador => marcador.classList.remove('active'));
     // Adiciona a classe active ao slide e marcador atuais

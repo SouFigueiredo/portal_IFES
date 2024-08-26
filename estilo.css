@@ -4,6 +4,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Estilizando o track da scrollbar */
+::-webkit-scrollbar-track {
+    background: #0f1218; /* Cor do fundo da barra de rolagem */
+    border-radius: 20px; /* Bordas arredondadas do fundo */
+}
+
+/* Estilizando o thumb da scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #33383e; /* Cor da "pegada" da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas do thumb */
+}
+
+/* Estilizando o thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1c232eae; /* Cor da pegada ao passar o mouse */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +33,24 @@
 
 body {
     background-color: #1C232E;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-.conteudoHome {
+.bodyHome {
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    transition: filter 1s ease;
+}
+
+.bodyNoticias {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 100vw;
+    height: 300vh;
     transition: filter 1s ease;
 }
 
@@ -33,10 +64,15 @@ body {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.649);
 }
 
+.abaTerceirao {
+    color: white !important;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.649);
+}
+
 /* Divs principais */
 .header {
     width: 100%;
-    height: 18%;
+    height: 18% !important;
     background-color: #1C232E;
     display: flex;
     flex-direction: row;
@@ -45,7 +81,33 @@ body {
     user-select: none;
 }
 
-.main {
+.headerNoticias {
+    position: fixed;
+    width: 1495px;
+    height: 134px;
+    background-color: #1C232E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+    z-index: 6;
+    top: 0;   
+}
+
+.headerNoticias::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Altura do gradiente */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), #0f12182d);
+    pointer-events: none; /* Garante que o gradiente não interfira na interação com a página */
+  }
+
+
+.mainNoticias {
     background-color: #1C232E;
     width: 100%;
     height: 82%;
@@ -54,9 +116,18 @@ body {
     align-items: center;
 }
 
+.apresentacaoNoticias{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh !important;
+}
+
 /* Lista de abas no topo */
 .abas {
     width: 30%;
+    transition: none;
 }
 
 a {
@@ -149,6 +220,7 @@ li:hover {
     height: 90%;
     width: 80%;
     display: flex;
+    align-items: center;
 }
 
 .abaPesquisa {
@@ -212,6 +284,7 @@ li:hover {
 
 .aba1 {
     width: 50%;
+    height: 90%;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -219,34 +292,50 @@ li:hover {
 
 .aba2 {
     width: 50%;
+    height: 90%;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.noticia1, .noticia2 {
+.noticia1 {
     position: relative;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: #1C232E;
-    width: 400px;
-    height: 450px;
+    width: 85%;
+    height: 100%;
     overflow: hidden;
-    margin: 60px;
+    margin-right: 2%;
 }
 
-.noticia1 img, .noticia2 img {
+.noticia2, .noticia3 {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #1C232E;
+    width: 85%;
+    height: 48%;
+    overflow: hidden;
+    margin-left: 2%;
+}
+
+.noticia1 img, .noticia2 img, .noticia3 img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
+    border-radius: 10px;
 }
 
 .noticia1::before,
 .noticia1::after,
 .noticia2::before,
-.noticia2::after {
+.noticia2::after,
+.noticia3::before,
+.noticia3::after {
     content: "";
     position: absolute;
     left: 0;
@@ -254,20 +343,25 @@ li:hover {
     height: 60%;
     pointer-events: none;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .noticia1::before,
-.noticia2::before {
+.noticia2::before,
+.noticia3::before {
     top: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    border-radius: 10px;
 }
 
 .noticia1::after,
-.noticia2::after {
+.noticia2::after,
+.noticia3::after {
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-radius: 10px;
 }
 
 .textoCima {
@@ -275,9 +369,7 @@ li:hover {
     font-weight: 600;
     position: absolute;
     top: 5px;
-    right: 110px;
-    width: 100%;
-    text-align: center;
+    left: 10px;
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -321,8 +413,70 @@ li:hover {
     border-top-right-radius: 15px;
 }
 
-.noticia1:hover img, .noticia2:hover img {
+.noticia1:hover img, .noticia2:hover img, .noticia3:hover img {
     transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.listNoticias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+.listNoticia {
+    display: flex;
+    padding: 40px;
+    height: 300px;
+    width: 65%;
+    box-shadow: 5px 5px 6px 3px rgba(0, 0, 0, 0.344);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.listNoticia img {
+    width: 100%;
+    height: 100%;
+}
+
+.ftListNoticia {
+    background-color: #1C232E;
+    overflow: hidden;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.detalhesListNoticia {
+    width: 50%;
+    padding: 2%;
+}
+
+.detalhesListNoticia p{
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+.tituloListNoticia{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.descricaoListNoticia{
+    color: #b0b0b0 !important; 
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.dataListNoticia{
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 2%;
 }
 
 /*Aba de Home*/
@@ -365,10 +519,10 @@ li:hover {
 
 .carrossel {
     position: relative;
-    width: 525px;
+    width: 80%;
     overflow: hidden;
     border-radius: 20px;
-    height: 300px;
+    height: 60%;
 }
 
 .carrosselFotos {
@@ -396,7 +550,7 @@ li:hover {
 
 .carrosselNoticias img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
     cursor: pointer;
@@ -406,7 +560,7 @@ li:hover {
     font-family: "Inter", sans-serif;
     font-weight: 700;
     position: absolute;
-    bottom: 25px;
+    bottom: 25%;
     left: 28px;
     z-index: 2;
     color: white;
@@ -422,7 +576,7 @@ li:hover {
 
 .barra-navegacao {
     position: absolute;
-    bottom: 23px;
+    bottom: 8%;
     right: 0;
     transform: translateX(-50%);
     display: flex;
@@ -534,6 +688,17 @@ li:hover {
     width: 100vw;
     height: 100vh;
     background-color: #1C232E;
+    overflow: hidden;
+}
+
+.desfocadoNoticias{
+    filter: blur(7px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 100vw;
+    height: 300vh;
 }
 
 /*Para retirar o efeito de blur*/
@@ -657,11 +822,11 @@ li:hover {
     text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.649);
 }
 
-.btAtivoLogin{
+.btAtivoLogin {
     display: block;
 }
 
-.btOcultoLogin{
+.btOcultoLogin {
     display: none;
 }
 
@@ -707,7 +872,7 @@ li:hover {
     width: 178px;
 }
 
-.fechaLogin{
+.fechaLogin {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -720,11 +885,50 @@ li:hover {
     transition: 0.3s;
 }
 
-.fechaLogin img{
+.fechaLogin img {
     width: 14px;
     cursor: pointer;
 }
 
 .fechaLogin:hover {
     background-color: #1c232e48;
+}
+
+.mainTerceirao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 82%;
+}
+
+.abaPrincipalTerceirao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+}
+
+.carrosselTurmas {
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+.eventos {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 40%;
+}
+
+.evento {
+    width: 33.3%;
+    margin: 10px;
+}
+
+.evento img {
+    width: 100%;
 }
