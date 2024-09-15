@@ -45,9 +45,6 @@ document.getElementById('mudaAba').addEventListener('click', function () {
     if (aba.classList.contains('abaMovelEntrar')) {
         aba.classList.remove('abaMovelEntrar');
 
-        inputEmail.classList.remove('inputOcultoLogin');
-        inputEmail.classList.add('inputAtivoLogin');
-
         inputCodigo.classList.remove('inputAtivoLogin');
         inputCodigo.classList.add('inputOcultoLogin');
 
