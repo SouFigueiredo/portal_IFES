@@ -15,22 +15,21 @@
   <div class="bodyNoticias">
     <div class="apresentacaoNoticias">
       <div class="headerNoticias">
-        <div class="logo">
+        <div class="logoAdm">
           <img src="images/logo.png" alt="" />
         </div>
 
         <div class="abas">
           <ul class="listAbas">
-            <li><a href="abaHome.html">HOME</a></li>
-            <img src="images/minus.png" alt="" />
-            <li><a href="abaNoticias.html" class="abaNoticias">NOTÍCIAS</a></li>
+            <li><a href="abaNoticiasAdm.html" class="abaNoticias">NOTÍCIAS</a></li>
             <img src="images/minus.png" alt="" />
             <li><a href="abaTerceirao.html">TERCEIRÃO</a></li>
           </ul>
         </div>
-        <div class="conta" id="btEntrar">
-          <button class="btEntrarConta">Entrar como Administrador<img class="setaConta"
-              src="images/angulo-direito.png" /></button>
+        <div class="conta">
+            <div class="barraUser">
+                <p class="nomeUser">Carlos Godinho</p><img src="images/iconUser.png" alt="">
+            </div>
         </div>
       </div>
 
@@ -117,10 +116,9 @@
   </div>
 
 
-  <!--Aba Login-->
   <div id="abaLogin" class="login">
     <div id="btVoltar" class="fechaLogin">
-      <img class="btFechaLogin" src="images/iconSair.png" alt="">
+      <img class="btFechaLogin" src="images/x.png" alt="">
     </div>
     <div class="divAbaLogin">
       <div class="tituloLogin">
@@ -133,28 +131,26 @@
         <p class="tituloAba">Entrar<br>como Adm</p>
         <div class="abaMovel"></div>
       </div>
-    </div>
 
-    <div class="inputAtivoLogin">
-      <div class="dados">
-        <div class="inputEmail">
+      <div class="inputAtivoLogin">
+        <div class="dados">
           <p class="credenciais">Email:</p>
           <input id="inEmail" placeholder="Solicite o código de administrador" class="inDados">
         </div>
       </div>
-    </div>
-    <div class="inputOcultoLogin">
-      <div class="dados">
-        <p class="credenciais">Email:</p>
-        <input id="inEmailEntrar" placeholder="Entre com seu email" class="inDados">
-        <p class="credenciais">Código:</p>
-        <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
-      </div>
-    </div>
+      <div class="inputOcultoLogin">
+        <div class="dados">
+          <p class="credenciais">Código:</p>
+          <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
+        </div>
 
-    <div class="buttons">
-      <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
-      <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
+      </div>
+
+      <div class="buttons">
+        <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
+        <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
+      </div>
+
     </div>
 
   </div>

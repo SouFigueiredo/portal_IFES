@@ -83,8 +83,8 @@ body {
 
 .headerNoticias {
     position: fixed;
-    width: 1495px;
-    height: 134px;
+    width: 1480px;
+    height: 131px;
     background-color: #1C232E;
     display: flex;
     flex-direction: row;
@@ -143,14 +143,18 @@ ul img {
     transform: rotate(90deg);
 }
 
-ul {
+.listAbas {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style-type: none;
     font-family: "Nanum Gothic", sans-serif;
     font-weight: 600;
     font-style: normal;
     color: #B0B0B0;
+}
+
+.listAbas > *{
+    margin: 6%;
 }
 
 li {
@@ -189,6 +193,7 @@ li:hover {
 }
 
 .conta {
+    width: 18%;
     color: white;
     display: flex;
     align-items: center;
@@ -212,6 +217,10 @@ li:hover {
 
 /* Logo */
 .logo img {
+    width: 45px;
+}
+
+.logoAdm img{
     width: 45px;
 }
 
@@ -721,7 +730,10 @@ li:hover {
 }
 
 .abaLoginVisivel {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .dados input::placeholder {
@@ -731,8 +743,10 @@ li:hover {
 }
 
 .divAbaLogin {
+    position: absolute;
+    top: 10%;
     width: 100%;
-    height: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -755,6 +769,10 @@ li:hover {
     width: 70%;
 }
 
+.inputEmail {
+    margin-bottom: 10%;
+}
+
 .credenciais {
     font-weight: 600;
     font-size: 14px;
@@ -767,6 +785,7 @@ li:hover {
     border-left: none;
     border-right: none;
     border-bottom: solid 2px black;
+    margin-bottom: 10px;
 }
 
 .inDados:focus {
@@ -859,7 +878,7 @@ li:hover {
     position: absolute;
     background-color: #1C232E;
     border-radius: 30px;
-    width: 150px;
+    width: 155px;
     height: 100%;
     left: 0;
     transition: left 0.5s;
@@ -868,8 +887,8 @@ li:hover {
 }
 
 .abaMovelEntrar {
-    left: 144px;
-    width: 178px;
+    left: 158px;
+    width: 198px;
 }
 
 .fechaLogin {
@@ -906,22 +925,15 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: 70%;
-}
-
-.carrosselTurmas {
-    width: 60%;
-    height: 50%;
-    background-color: white;
-    margin: 10px;
+    width: 70%;
+    height: 80%;
 }
 
 .eventos {
     display: flex;
     flex-direction: row;
     width: 60%;
-    height: 40%;
+    height: 60%;
 }
 
 .evento {
@@ -931,4 +943,103 @@ li:hover {
 
 .evento img {
     width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.evento img:hover {
+    box-shadow: 0px 0px 6px 2px #0a111a;
+    transform: scale(1.02);
+}
+
+/*Página adm - notícias*/
+
+.barraUser img{
+    width: 28px;
+}
+
+.barraUser{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*carrossel terceirao turmas*/
+
+.carrosselTurmas{
+    position: relative;
+    width: 60%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: box-shadow 0.4s;
+}
+
+.carrosselTurmas:hover{
+    box-shadow: 0px 0px 20px 5px #111926;
+}
+
+.itensTurmas{
+    display: flex;
+}
+
+.carrosselTurmasItens {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrosselTurmasItens:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    z-index: 1;
+}
+
+.carrosselTurmasItens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.nomeTurma {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    bottom: 30%;
+    left: 28px;
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.carrosselTurmasItens.active .nomeTurma {
+    opacity: 1;
+}
+
+/*Pop-up para verificar as informações do clicável da aba terceirão*/
+
+.popUpTerceirao{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.block{
+    display: block;
 }

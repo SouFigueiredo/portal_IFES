@@ -1,28 +1,8 @@
-import { Conta } from './Conta.js';
-
-//animação ao abrir o icone de busca
-const iconBusca = document.getElementById("clickBusca");
-const inBusca = document.getElementById("inBusca");
-const divBusca = document.querySelector(".barraPesquisa");
-
-iconBusca.addEventListener('click', function(){
-    inBusca.focus();
-})
-
-inBusca.addEventListener('focus', function(){
-    iconBusca.src = 'images/seachComum.png';
-    divBusca.classList.add('focada');
-})
-
-inBusca.addEventListener('blur', function(){
-    iconBusca.src = 'images/seachWhite.png';
-    divBusca.classList.remove('focada');
-})
-
 const btEntrarLogin = document.getElementById('btEntrarLogin');
 const inEmail = document.getElementById('inEmail');
 
 //para desfocar ou focar o fundo do site
+
 document.getElementById('btEntrar').addEventListener('click', function () {
     if (aba.classList.contains('abaMovelEntrar')) {
 
@@ -45,7 +25,7 @@ document.getElementById('btEntrar').addEventListener('click', function () {
         inputCodigo.classList.add('inputOcultoLogin');
     }
 
-    document.querySelector('.bodyNoticias').classList.add('desfocadoNoticias');
+    document.querySelector('.bodyHome').classList.add('desfocado');
     setTimeout(function () {
         document.getElementById('abaLogin').classList.add('abaLoginVisivel');
     }, 400);
@@ -60,9 +40,9 @@ let btEntrar = document.querySelector('.btOcultoLogin');
 let btSolicitar = document.querySelector('.btAtivoLogin');
 
 document.getElementById('mudaAba').addEventListener('click', function () {
-    if(aba.classList.contains('abaMovelEntrar')){
+    if (aba.classList.contains('abaMovelEntrar')) {
         aba.classList.remove('abaMovelEntrar');
-        
+
         inputEmail.classList.remove('inputOcultoLogin');
         inputEmail.classList.add('inputAtivoLogin');
 
@@ -74,9 +54,9 @@ document.getElementById('mudaAba').addEventListener('click', function () {
 
         btSolicitar.classList.remove('btOcultoLogin');
         btSolicitar.classList.add('btAtivoLogin');
-    }else{
+    } else {
         aba.classList.add('abaMovelEntrar');
-        
+
         inputEmail.classList.add('inputOcultoLogin');
         inputEmail.classList.remove('inputAtivoLogin');
 
@@ -94,7 +74,7 @@ document.getElementById('mudaAba').addEventListener('click', function () {
 //botao para sair da tela de login
 const btVoltar = document.getElementById("btVoltar");
 btVoltar.addEventListener('click', function () {
-    document.querySelector('.bodyNoticias').classList.remove('desfocadoNoticias');
+    document.querySelector('.bodyHome').classList.remove('desfocado');
     document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
 })
 
@@ -106,15 +86,74 @@ document.getElementById('btSolicitar').addEventListener('click', function () {
     vetContas.push(conta)
 
     if (vetContas.length > 0) {
-        document.querySelector('.bodyNoticias').classList.remove('desfocadoNoticias');
+        document.querySelector('.bodyHome').classList.remove('desfocado');
         document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
     }
 })
 
-document.getElementById('btEntrarLogin').addEventListener('click', function () {
-        document.querySelector('.bodyNoticias').classList.remove('desfocadoNoticias');
-        document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
+// Seleciona os elementos necessários
+const itensTurmas = document.querySelector('.itensTurmas');
+const marcadores = document.querySelectorAll('.marcador');
+const slides = document.querySelectorAll('.carrosselTurmasItens');
+const totalFotos = marcadores.length;
+const intervalo = 2000; // Tempo em milissegundos para a transição automática
 
-        window.location.href = "abaNoticiasAdm.html";
+let slideIndex = 0;
 
-})
+// Função para mostrar um slide específico
+function mostrarSlide(index) {
+    // Move os slides
+    itensTurmas.style.transform = `translateX(${-index * 100}%)`;
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    marcadores.forEach(marcador => marcador.classList.remove('active'));
+    // Adiciona a classe active ao slide e marcador atuais
+    slides[index].classList.add('active');
+    marcadores[index].classList.add('active');
+}
+
+// Função para alterar o slide ao clicar nos marcadores
+marcadores.forEach((marcador, index) => {
+    marcador.addEventListener('click', () => {
+        slideIndex = index;
+        mostrarSlide(slideIndex);
+    });
+});
+
+// Inicia o carrossel e define o intervalo automático
+function iniciarCarrossel() {
+    mostrarSlide(slideIndex);
+    setInterval(() => {
+        slideIndex = (slideIndex + 1) % totalFotos;
+        mostrarSlide(slideIndex);
+    }, intervalo);
+}
+
+iniciarCarrossel();
+
+let evento1 = document.querySelector('.imgEvent1');
+let evento2 = document.querySelector('.imgEvent2');
+let evento3 = document.querySelector('.imgEvent3');
+let bodyHome = document.querySelector('.bodyHome');
+let popUp = document.querySelector('.popUpTerceirao');
+
+evento1.addEventListener('click', function () {
+    bodyHome.classList.add('desfocado');
+    popUp.classList.add('block');
+    // Ação específica para o evento 1
+    popUp.innerHTML = '<h2>Informação do evento 1</h2><p>Conteúdo relacionado ao primeiro evento.</p>';
+});
+
+evento2.addEventListener('click', function () {
+    bodyHome.classList.add('desfocado');
+    popUp.classList.add('block');
+    // Ação específica para o evento 2
+    popUp.innerHTML = '<h2>Informação do evento 2</h2><p>Conteúdo relacionado ao segundo evento.</p>';
+});
+
+evento3.addEventListener('click', function () {
+    bodyHome.classList.add('desfocado');
+    popUp.classList.add('block');
+    // Ação específica para o evento 3
+    popUp.innerHTML = '<h2>Informação do evento 3</h2><p>Conteúdo relacionado ao terceiro evento.</p>';
+});

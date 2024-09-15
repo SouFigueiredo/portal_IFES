@@ -19,7 +19,7 @@
       </div>
 
       <div class="abas">
-        <ul>
+        <ul class="listAbas">
           <li><a href="abaHome.html" class="abaHome">HOME</a></li>
           <img src="images/minus.png" alt="" />
           <li><a href="abaNoticias.html">NOTÍCIAS</a></li>
@@ -80,7 +80,7 @@
   <!--Aba Login-->
   <div id="abaLogin" class="login">
     <div id="btVoltar" class="fechaLogin">
-      <img class="btFechaLogin" src="images/x.png" alt="">
+      <img class="btFechaLogin" src="images/iconSair.png" alt="">
     </div>
     <div class="divAbaLogin">
       <div class="tituloLogin">
@@ -93,26 +93,28 @@
         <p class="tituloAba">Entrar<br>como Adm</p>
         <div class="abaMovel"></div>
       </div>
+    </div>
 
-      <div class="inputAtivoLogin">
-        <div class="dados">
+    <div class="inputAtivoLogin">
+      <div class="dados">
+        <div class="inputEmail">
           <p class="credenciais">Email:</p>
           <input id="inEmail" placeholder="Solicite o código de administrador" class="inDados">
         </div>
       </div>
-      <div class="inputOcultoLogin">
-        <div class="dados">
-          <p class="credenciais">Código:</p>
-          <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
-        </div>
-
+    </div>
+    <div class="inputOcultoLogin">
+      <div class="dados">
+        <p class="credenciais">Email:</p>
+        <input id="inEmailEntrar" placeholder="Entre com seu email" class="inDados">
+        <p class="credenciais">Código:</p>
+        <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
       </div>
+    </div>
 
-      <div class="buttons">
-        <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
-        <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
-      </div>
-
+    <div class="buttons">
+      <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
+      <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
     </div>
 
   </div>

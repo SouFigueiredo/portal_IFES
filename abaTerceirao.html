@@ -13,14 +13,14 @@
 
 <body>
   <div class="bodyHome">
-    
+
     <div class="header">
       <div class="logo">
         <img src="images/logo.png" alt="" />
       </div>
 
       <div class="abas">
-        <ul>
+        <ul class="listAbas">
           <li><a href="abaHome.html">HOME</a></li>
           <img src="images/minus.png" alt="" />
           <li><a href="abaNoticias.html">NOTÍCIAS</a></li>
@@ -41,13 +41,28 @@
 
       <div class="abaPrincipalTerceirao">
         <div class="carrosselTurmas">
-          <div class="itensTurmas"></div>
+          <div class="itensTurmas">
+            <div class="carrosselTurmasItens"><img src="images/turma1.png">
+              <p class="nomeTurma">Turma 1</p>
+            </div>
+            <div class="carrosselTurmasItens"><img src="images/turma2.png">
+              <p class="nomeTurma">Turma 2</p>
+            </div>
+            <div class="carrosselTurmasItens"><img src="images/turma3.jpg">
+              <p class="nomeTurma">Turma 3</p>
+            </div>
+          </div>
+          <div class="barra-navegacao">
+            <div class="marcador" data-slide="0"></div>
+            <div class="marcador" data-slide="1"></div>
+            <div class="marcador" data-slide="2"></div>
+          </div>
         </div>
 
         <div class="eventos">
-          <div class="evento 1"><img src="images/correioAmor.png" alt=""></div>
-          <div class="evento 2"><img src="images/festaJunina.png" alt=""></div>
-          <div class="evento 3"><img src="images/correioElegante.png" alt=""></div>
+          <div class="evento"><img class="imgEvent1" src="images/correioAmor.png" alt=""></div>
+          <div class="evento"><img class="imgEvent2" src="images/festaJunina.png" alt=""></div>
+          <div class="evento"><img class="imgEvent3" src="images/correioElegante.png" alt=""></div>
         </div>
       </div>
 
@@ -56,10 +71,15 @@
 
   </div>
 
+<!--Pop-up para apresentar informações-->
+
+<div class="popUpTerceirao">
+</div>
+
   <!--Aba Login-->
   <div id="abaLogin" class="login">
     <div id="btVoltar" class="fechaLogin">
-      <img class="btFechaLogin" src="images/x.png" alt="">
+      <img class="btFechaLogin" src="images/iconSair.png" alt="">
     </div>
     <div class="divAbaLogin">
       <div class="tituloLogin">
@@ -72,31 +92,33 @@
         <p class="tituloAba">Entrar<br>como Adm</p>
         <div class="abaMovel"></div>
       </div>
+    </div>
 
-      <div class="inputAtivoLogin">
-        <div class="dados">
+    <div class="inputAtivoLogin">
+      <div class="dados">
+        <div class="inputEmail">
           <p class="credenciais">Email:</p>
           <input id="inEmail" placeholder="Solicite o código de administrador" class="inDados">
         </div>
       </div>
-      <div class="inputOcultoLogin">
-        <div class="dados">
-          <p class="credenciais">Código:</p>
-          <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
-        </div>
-
+    </div>
+    <div class="inputOcultoLogin">
+      <div class="dados">
+        <p class="credenciais">Email:</p>
+        <input id="inEmailEntrar" placeholder="Entre com seu email" class="inDados">
+        <p class="credenciais">Código:</p>
+        <input id="inCodigo" placeholder="Entre com o código de administrador" class="inDados">
       </div>
+    </div>
 
-      <div class="buttons">
-        <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
-        <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
-      </div>
-
+    <div class="buttons">
+      <input id="btSolicitar" class="btAtivoLogin" type="button" value="Solicitar">
+      <input id="btEntrarLogin" class="btOcultoLogin" type="button" value="Entrar">
     </div>
 
   </div>
 
-  <script type="module" src="homeScript.js"></script>
+  <script type="module" src="terceiraoScript.js"></script>
 </body>
 
 </html>
