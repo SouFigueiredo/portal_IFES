@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div com Foco</title>
+    <style>
+        .minhaDiv {
+            width: 300px;
+            height: 100px;
+            background-color: lightgray;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .focada {
+            border: 2px solid blue; /* Indica que a div está "focada" */
+            background-color: white; /* Muda o fundo ao focar */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="minhaDiv" tabindex="0">Clique em mim</div>
+
+    <script>
+        const minhaDiv = document.querySelector('.minhaDiv');
+
+        // Adiciona foco à div quando ela é clicada
+        minhaDiv.addEventListener('click', function () {
+            minhaDiv.classList.add('focada');
+        });
+
+        // Remove o foco da div quando clicar em qualquer outro lugar
+        document.addEventListener('click', function (event) {
+            // Verifica se o clique foi fora da div
+            if (!minhaDiv.contains(event.target)) {
+                minhaDiv.classList.remove('focada');
+            }
+        });
+    </script>
+
+</body>
+</html>

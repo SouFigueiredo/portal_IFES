@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bem vindo ao Iformado!</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bodyHome">
+
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+
+            <div class="abas">
+                <ul class="listAbas">
+                    <li class="abasSite"><a href="abaNoticiasAdm.html">NOTÍCIAS</a></li>
+                    <img src="images/minus.png" alt="" />
+                    <li class="abasSite"><a href="abaTerceiraoAdm.html" class="abaTerceirao">TERCEIRÃO</a></li>
+                </ul>
+            </div>
+
+            <div class="conta">
+                <div class="barraUser" tabindex="0">
+                    <div class="user">
+                        <p class="nomeUser">Carlos Godinho</p>
+                        <img src="images/iconUser.png" alt="">
+                    </div>
+
+                    <ul class="linksConta">
+                        <li>
+                            <a><img class="iconsUser" src="images/iconAddBarraUser.png">Adicionar evento</a>
+                        </li>
+                        <li>
+                            <a href="abaHome.html"><img class="iconsUser" src="images/iconLogOut.png">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Conteúdo Terceirão-->
+        <div class="mainTerceirao">
+
+            <div class="abaPrincipalTerceirao">
+                <div class="carrosselTurmas">
+                    <div class="itensTurmas">
+                        <div class="carrosselTurmasItens"><img src="images/turma1.png">
+                            <p class="nomeTurma">Turma 1</p>
+                        </div>
+                        <div class="carrosselTurmasItens"><img src="images/turma2.png">
+                            <p class="nomeTurma">Turma 2</p>
+                        </div> 
+                        <div class="carrosselTurmasItens"><img src="images/turma3.jpg">
+                            <p class="nomeTurma">Turma 3</p>
+                        </div>
+                    </div>
+                    <div class="barra-navegacao">
+                        <div class="marcador" data-slide="0"></div>
+                        <div class="marcador" data-slide="1"></div>
+                        <div class="marcador" data-slide="2"></div>
+                    </div>
+                </div>
+
+                <div class="eventos">
+                    <div class="evento"><img class="imgEvent1" src="images/correioAmor.png" alt=""></div>
+                    <div class="evento"><img class="imgEvent2" src="images/festaJunina.png" alt=""></div>
+                    <div class="evento"><img class="imgEvent3" src="images/correioElegante.png" alt=""></div>
+                    <div class="addEvento"><img src="images/iconAddWhite.png"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!--Pop-up para apresentar informações-->
+
+    <div class="popUpTerceirao">
+    </div>
+
+    <script type="module" src="terceiraoAdmScript.js"></script>
+</body>
+
+</html>

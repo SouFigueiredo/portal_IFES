@@ -132,3 +132,12 @@ function iniciarCarrossel() {
 }
 
 iniciarCarrossel();
+
+
+document.getElementById('btEntrarLogin').addEventListener('click', function () {
+    document.querySelector('.bodyHome').classList.remove('desfocado');
+    document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
+
+    window.location.href = "abaNoticiasAdm.html";
+
+})

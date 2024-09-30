@@ -141,7 +141,7 @@ evento1.addEventListener('click', function () {
     bodyHome.classList.add('desfocado');
     popUp.classList.add('block');
     // Ação específica para o evento 1
-    popUp.innerHTML = '<h2>Informação do evento 1</h2><p>Conteúdo relacionado ao primeiro evento.</p>';
+    popUp.innerHTML = '<h2 class="caralho">Informação do evento 1</h2><p>Conteúdo relacionado ao primeiro evento.</p>';
 });
 
 evento2.addEventListener('click', function () {
@@ -156,4 +156,39 @@ evento3.addEventListener('click', function () {
     popUp.classList.add('block');
     // Ação específica para o evento 3
     popUp.innerHTML = '<h2>Informação do evento 3</h2><p>Conteúdo relacionado ao terceiro evento.</p>';
+});
+
+//entrar como adm
+
+document.getElementById('btEntrarLogin').addEventListener('click', function () {
+    document.querySelector('.bodyHome').classList.remove('desfocado');
+    document.getElementById('abaLogin').classList.remove('abaLoginVisivel');
+
+    window.location.href = "abaTerceiraoAdm.html";
+
+})
+
+
+//a barra de user se expande
+const barraUser = document.querySelector('.barraUser');
+const linksConta = document. querySelector('.linksConta');
+
+// Adiciona a classe ao clicar na barra ou em qualquer filho da barra
+barraUser.addEventListener('click', function () {
+    if (barraUser.classList.contains('focadaUser')) {
+        barraUser.classList.remove('focadaUser');
+        linksConta.classList.remove('sairConta');
+    } else {
+        barraUser.classList.add('focadaUser');
+        linksConta.classList.add('sairConta');
+
+    }
+});
+
+// Remove a classe ao clicar fora da barraUser
+document.addEventListener('click', function (event) {
+    if (!barraUser.contains(event.target)) {
+        barraUser.classList.remove('focadaUser');
+        linksConta.classList.remove('sairConta');
+    }
 });
