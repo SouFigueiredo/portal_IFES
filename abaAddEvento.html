@@ -1,0 +1,82 @@
+.
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar um evento</title>
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bodyAddEvent">
+
+        <div class="headerAddEvent">
+            <div class="logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+
+            <div class="abas">
+                <ul class="listAbas">
+                    <li class="abasSite"><a href="abaNoticiasAdm.html">NOTÍCIAS</a></li>
+                    <img src="images/minus.png" alt="" />
+                    <li class="abasSite"><a href="abaTerceiraoAdm.html">TERCEIRÃO</a></li>
+                    <img src="images/minus.png" alt="" />
+                    <li class="abasSite abaAtual"><a href="abaAddEvento.html">ADICIONAR EVENTO</a></li>
+                </ul>
+            </div>
+
+            <div class="conta">
+                <div class="barraUser" tabindex="0">
+                    <div class="user">
+                        <p class="nomeUser">Carlos Godinho</p>
+                        <img src="images/iconUser.png" alt="">
+                    </div>
+
+                    <ul class="linksConta">
+                        <li class="opcao">
+                            <a href="abaHome.html"><img class="iconsUser" src="images/iconLogOut.png">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Conteúdo Terceirão-->
+        <div class="mainTerceirao">
+
+            <div class="abaPrincipalTerceirao">
+                <a class="linkBackEvent" href="abaTerceiraoAdm.html"><img class="iconVoltar" src="images/iconVoltar.png"></a>
+
+                <div class="inputsAddEvento">
+                    <div class="inputImagemEvent">
+                        <img src="images/iconAddWhite.png">
+                    </div>
+                    <input id="addImgEvent" class="inputAddImagem" type="file" accept="image/*">
+
+                    <div class="inputsAddEvento2">
+                        <input id="addNomeEvent" class="addNomeEvent" type="text"
+                            placeholder="Insira um nome para o evento">
+                        <input id="addDataEvent" class="AddDataEvent" type="text" placeholder="Insira a data prevista do evento">
+                        <input id="addLocEvent" class="AddLocEvent" type="text" placeholder="Insira a localização do evento">
+                        <textarea id="addDescricaoEvent" class="descAddEvento" rows="5"
+                            placeholder="Insira uma descrição para o evento"></textarea>
+                        <input id="btAddEvent" class="btAddEvent" type="button" value="Adicionar evento">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script type="module" src="assets/js/addEvent.js"></script>
+</body>
+
+</html>

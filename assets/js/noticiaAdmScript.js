@@ -45,3 +45,9 @@ document.addEventListener('click', function (event) {
         }, 200);
     }
 });
+
+
+//quando clica nas opções de adm
+document.querySelector('.opcao').addEventListener('click', function(){
+    window.location.href = 'abaHome.html';
+});

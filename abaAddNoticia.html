@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar nova evento</title>
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+
+<body>
+  <div class="bodyAddNoticias">
+    <div class="apresentacaoNoticias">
+      <div class="header">
+        <div class="logoAdm">
+          <img src="images/logo.png" alt="" />
+        </div>
+
+        <div class="abas">
+          <ul class="listAbas">
+            <li class="abasSite"><a href="abaNoticiasAdm.html">NOTÍCIAS</a></li>
+            <img src="images/minus.png" alt="" />
+            <li class="abasSite"><a href="abaTerceiraoAdm.html">TERCEIRÃO</a></li>
+            <img src="images/minus.png" alt="" />
+            <li class="abasSite abaAtual"><a href="abaAddNoticia.html">ADICIONAR NOTÍCIA</a></li>
+          </ul>
+        </div>
+
+        <div class="conta">
+          <div class="barraUser" tabindex="0">
+            <div class="user">
+              <p class="nomeUser">Carlos Godinho</p>
+              <img src="images/iconUser.png" alt="">
+            </div>
+
+            <ul class="linksConta">
+              <li class="opcao">
+                <a href="abaHome.html"><img class="iconsUser" src="images/iconLogOut.png">Sair</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="mainNoticias">
+        <a class="linkBackNoticia" href="abaNoticiasAdm.html"><img class="iconVoltar" src="images/iconVoltar.png"></a>
+
+        <div class="inputsAddNoticias">
+          <div class="inputImagemNoticia">
+            <img src="images/iconAddWhite.png">
+          </div>
+          <input id="addImagemNoticia" class="inputAddImagem" type="file" accept="image/*">
+          <input id="addTituloPrincipal" class="addTituloPrincipal" type="text"
+            placeholder="Insira um título principal para a notícia">
+          <input id="addSubtitulo" class="addSubtitulo" type="text" placeholder="Insira um subtítulo para a notícia">
+          <input id="addPreview" class="addPreview" type="text" placeholder="Insira um preview">
+          <div class="inputsAddNoticias2">
+            <textarea id="addDescricaoEvent" class="descAddNoticia" rows="5"
+              placeholder="Insira uma descrição para a notícia"></textarea>
+            <input id="btPostNoticia" class="btPostNoticia" type="button" value="Postar notícia">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/addNoticia.js"></script>
+</body>
+
+</html>

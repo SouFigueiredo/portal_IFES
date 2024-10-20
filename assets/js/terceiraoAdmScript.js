@@ -93,3 +93,8 @@ evento3.addEventListener('click', function () {
     // Ação específica para o evento 3
     popUp.innerHTML = '<h2>Informação do evento 3</h2><p>Conteúdo relacionado ao terceiro evento.</p>';
 });
+
+//quando clica nas opções de adm
+document.querySelector('.opcao').addEventListener('click', function(){
+    window.location.href = 'abaHome.html';
+});

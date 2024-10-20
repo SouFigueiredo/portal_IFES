@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bem vindo ao Iformado!</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="assets/css/estilo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
@@ -23,7 +23,9 @@
                 <ul class="listAbas">
                     <li class="abasSite"><a href="abaNoticiasAdm.html">NOTÍCIAS</a></li>
                     <img src="images/minus.png" alt="" />
-                    <li class="abasSite"><a href="abaTerceiraoAdm.html" class="abaTerceirao">TERCEIRÃO</a></li>
+                    <li class="abasSite abaAtual"><a href="abaTerceiraoAdm.html">TERCEIRÃO</a></li>
+                    <img src="images/minus.png" alt="" />
+                    <li class="abasSite"><a href="abaAddEvento.html">ADICIONAR EVENTO</a></li>
                 </ul>
             </div>
 
@@ -35,13 +37,10 @@
                     </div>
 
                     <ul class="linksConta">
-                        <li>
-                            <a><img class="iconsUser" src="images/iconAddBarraUser.png">Adicionar evento</a>
+                        <li class="opcao">
+                          <a href="abaHome.html"><img class="iconsUser" src="images/iconLogOut.png">Sair</a>
                         </li>
-                        <li>
-                            <a href="abaHome.html"><img class="iconsUser" src="images/iconLogOut.png">Sair</a>
-                        </li>
-                    </ul>
+                      </ul>
                 </div>
             </div>
         </div>
@@ -88,7 +87,7 @@
     <div class="popUpTerceirao">
     </div>
 
-    <script type="module" src="terceiraoAdmScript.js"></script>
+    <script type="module" src="assets/js/terceiraoAdmScript.js"></script>
 </body>
 
 </html>
