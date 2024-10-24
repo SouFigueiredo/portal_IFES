@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adicionar nova evento</title>
+  <title>Adicionar nova notícia</title>
   <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 
@@ -44,22 +44,42 @@
       </div>
       <div class="mainNoticias">
         <a class="linkBackNoticia" href="abaNoticiasAdm.html"><img class="iconVoltar" src="images/iconVoltar.png"></a>
-
-        <div class="inputsAddNoticias">
-          <div class="inputImagemNoticia">
-            <img src="images/iconAddWhite.png">
+        <form id="formNoticia" action="./assets/php/criaNoticia.php" method="post">
+          <div class="inputsAddNoticias">
+            <div class="inputImagemNoticia">
+              <img src="images/iconAddWhite.png">
+            </div>
+            <label for="addImagemNoticia">
+              <input id="addImagemNoticia" class="inputAddImagem" 
+              type="file" accept="image/*" name="addImagemNoticia">
+            </label>
+            <label for="addTituloPrincipal">
+              <input id="addTituloPrincipal" class="addTituloPrincipal" type="text"
+              placeholder="Insira um título principal para a notícia"
+              name="addTituloPrincipal">
+            </label>
+            <label for="addSubtitulo">
+              <input id="addSubtitulo" class="addSubtitulo" type="text"
+              placeholder="Insira um subtítulo para a notícia"
+              name="addSubtitulo">
+            </label>
+            <label for="addPreview">
+              <input id="addPreview" class="addPreview" type="text" 
+              placeholder="Insira um preview" name="addPreview">
+            </label>
+            
+            <div class="inputsAddNoticias2">
+              <label for="addDescricaoEvent">
+                <textarea id="addDescricaoEvent" class="descAddNoticia" rows="5"
+                placeholder="Insira uma descrição para a notícia" 
+                name="addDescricaoEvent"></textarea>
+              </label>
+              <input id="btPostNoticia" class="btPostNoticia" type="submit" value="Postar notícia">
+            </div>
+            <div class="resultado">
+            </div>
           </div>
-          <input id="addImagemNoticia" class="inputAddImagem" type="file" accept="image/*">
-          <input id="addTituloPrincipal" class="addTituloPrincipal" type="text"
-            placeholder="Insira um título principal para a notícia">
-          <input id="addSubtitulo" class="addSubtitulo" type="text" placeholder="Insira um subtítulo para a notícia">
-          <input id="addPreview" class="addPreview" type="text" placeholder="Insira um preview">
-          <div class="inputsAddNoticias2">
-            <textarea id="addDescricaoEvent" class="descAddNoticia" rows="5"
-              placeholder="Insira uma descrição para a notícia"></textarea>
-            <input id="btPostNoticia" class="btPostNoticia" type="button" value="Postar notícia">
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

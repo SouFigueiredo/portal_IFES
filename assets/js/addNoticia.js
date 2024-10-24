@@ -37,3 +37,26 @@ document.addEventListener('click', function (event) {
 document.querySelector('.opcao').addEventListener('click', function(){
     window.location.href = 'abaHome.html';
 });
+
+document.getElementById('formNoticia').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio normal do formulário
+
+    // Cria um objeto FormData para enviar os dados do formulário
+    var formData = new FormData(this);
+
+    // Cria uma nova requisição AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', './assets/php/criaNoticia.php', true);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Se o upload foi bem-sucedido, exibe a resposta do servidor
+            alert(xhr.responseText);
+        } else {
+            alert(`Erro ao enviar a notícia: ${xhr.statusText}`);
+        }
+    };
+
+    // Envia a requisição
+    xhr.send(formData);
+});
