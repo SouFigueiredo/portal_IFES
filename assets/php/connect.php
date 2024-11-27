@@ -10,5 +10,7 @@ if ($conn->connect_error) {
     die("Falha na conexão, código de erro:" + $conn->connect_error);
 } echo "Conexão bem sucedida!";
 
-$conn->close();
+//É nescessário fechar a conexão no arquivo php que receber esse código
+//Codigo para fechar a cenexão: $conn->close();
+
 ?>
