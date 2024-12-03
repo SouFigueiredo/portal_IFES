@@ -37,3 +37,23 @@ document.addEventListener('click', function (event) {
 document.querySelector('.opcao').addEventListener('click', function(){
     window.location.href = 'abaHome.html';
 });
+
+// Executa o php de criação sem sair da página
+document.getElementById('formEvento').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', './assets/php/criaEvento.php', true);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            alert(xhr.responseText);
+        } else {
+            alert(`Erro ao enviar o evento: ${xhr.statusText}`);
+        }
+    };
+
+    xhr.send(formData);
+});

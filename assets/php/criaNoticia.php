@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descricao = $_POST['addDescricaoEvent'];
 
     if (isset($_FILES['addImagemNoticia']) && $_FILES['addImagemNoticia']['error'] === UPLOAD_ERR_OK) {
-        $diretorio_upload = '../images/uploads/';
+        $diretorio_upload = '../images/uploads/noticias/';
         $nome_imagem = uniqid() . '-' . basename($_FILES['addImagemNoticia']['name']);
         $caminho_imagem = $diretorio_upload . $nome_imagem;
 

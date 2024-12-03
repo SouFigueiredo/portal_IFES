@@ -472,6 +472,8 @@ ul img {
 
 .listNoticia {
     display: flex;
+    background-color: #292d35;
+    border-radius: 12px;
     padding: 40px;
     height: 300px;
     width: 65%;
@@ -1469,8 +1471,8 @@ form {
     border-left: none;
     border-right: none;
     border-bottom: solid 3px rgba(255, 255, 255, 0.1);
-    height: 8%;
-    width: 90%;
+    height: 60px;
+    width: 250px;
     font-size: 100%;
     color: white;
     font-family: "Afacad Flux", sans-serif;
@@ -1478,8 +1480,24 @@ form {
     transition: 0.4s;
     display: flex;
 }
+.inputsAddEvento input[type="date"] {
+    width: 250px;
+    background-color:rgba(0, 0, 0, 0);
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 600;
+    font-size: 100%;
+    color: rgb(146, 146, 146);
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.1);
+    padding-left: 12px;
 
-.inputsAddEvento input[type="text"]:hover{
+}
+
+
+.inputsAddEvento input[type="text"]:hover, .inputsAddEvento input[type="date"]:hover{
     border-bottom: solid 3px white;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.2);
 }
@@ -1519,4 +1537,8 @@ form {
     font-weight: 600;
     color: white;
     border: none;
+}
+
+.btAddEvent :hover{
+    cursor: pointer;
 }
