@@ -136,13 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const noticiaDiv = document.createElement("div");
                     noticiaDiv.className = "listNoticia";
                     noticiaDiv.innerHTML = `
-                        <div class="listNoticia">
                         <div class="ftListNoticia"><img src="assets/images/uploads/${noticia.imagem}" alt=""></div>
                         <div class="detalhesListNoticia">
                             <p class="dataListNoticia">${noticia.data}</p>
                             <p class="tituloListNoticia">${noticia.titulo}</p>
                             <p class="descricaoListNoticia">${noticia.descricao}</p>
-                        </div>
                     `;
                 noticiasContainer.appendChild(noticiaDiv);
             });
