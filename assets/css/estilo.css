@@ -1471,14 +1471,18 @@ form {
     border-left: none;
     border-right: none;
     border-bottom: solid 3px rgba(255, 255, 255, 0.1);
-    height: 8%;
-    width: 90%;
+    height: 40px;
+    width: 250px;
     font-size: 100%;
     color: white;
     font-family: "Afacad Flux", sans-serif;
     font-weight: 600;
     transition: 0.4s;
     display: flex;
+}
+
+.inputsAddEvento textarea {
+    height: 150px;
 }
 
 .inputsAddEvento input[type="text"]:hover{
