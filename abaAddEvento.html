@@ -52,23 +52,34 @@
 
             <div class="abaPrincipalTerceirao">
                 <a class="linkBackEvent" href="abaTerceiraoAdm.html"><img class="iconVoltar" src="images/iconVoltar.png"></a>
-
-                <div class="inputsAddEvento">
-                    <div class="inputImagemEvent">
-                        <img src="images/iconAddWhite.png">
+                <form id="formEvento" action="./assets/php/criaEvento.php" method="POST">
+                    <div class="inputsAddEvento">
+                        <div class="inputImagemEvent">
+                            <img src="images/iconAddWhite.png">
+                        </div>
+                        <label for="addImgEvent">
+                            <input id="addImgEvent" name="addImgEvent" class="inputAddImagem" type="file" accept="image/*">
+                        </label>
+                        
+                        <div class="inputsAddEvento2">
+                            <label for="addNomeEvent">
+                                <input id="addNomeEvent" name="addNomeEvent" class="addNomeEvent" type="text"
+                                placeholder="Insira um nome para o evento">
+                            </label>
+                            <label for="addDataEvent">
+                                <input id="addDataEvent" name="addDataEvent" class="AddDataEvent" type="date" placeholder="Insira a data prevista do evento">
+                            </label>
+                            <label for="addLocEvent">
+                                <input id="addLocEvent" name="addLocEvent" class="AddLocEvent" type="text" placeholder="Insira a localização do evento">
+                            </label>
+                            <label for="addDescricaoEvent">
+                                <textarea id="addDescricaoEvent" name="addDescricaoEvent" class="descAddEvento" rows="5"
+                                placeholder="Insira uma descrição para o evento"></textarea>
+                            </label>
+                            <input id="btAddEvent" class="btAddEvent" type="button" value="Adicionar evento">
+                        </div>
                     </div>
-                    <input id="addImgEvent" class="inputAddImagem" type="file" accept="image/*">
-
-                    <div class="inputsAddEvento2">
-                        <input id="addNomeEvent" class="addNomeEvent" type="text"
-                            placeholder="Insira um nome para o evento">
-                        <input id="addDataEvent" class="AddDataEvent" type="text" placeholder="Insira a data prevista do evento">
-                        <input id="addLocEvent" class="AddLocEvent" type="text" placeholder="Insira a localização do evento">
-                        <textarea id="addDescricaoEvent" class="descAddEvento" rows="5"
-                            placeholder="Insira uma descrição para o evento"></textarea>
-                        <input id="btAddEvent" class="btAddEvent" type="button" value="Adicionar evento">
-                    </div>
-                </div>
+                </form>
             </div>
 
 
